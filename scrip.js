@@ -61,7 +61,7 @@ const n = {
         jump: new Audio("jump.mp3"),
         score: new Audio("score.mp3"),
         hit: new Audio("hit.mp3"),
-        background: new Audio("background.mp3"),
+        background: new Audio("bhAAi.mp3"),
         rakesh_master: new Audio("Rakesh_Master_.mp3")
     }
 };
@@ -216,3 +216,4 @@ E.addEventListener("click", f);
 I.addEventListener("click", f);
 requestAnimationFrame(b);
 setInterval(C, 1e3 / 60);
+
