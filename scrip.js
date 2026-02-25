@@ -111,10 +111,9 @@ function B() {
         passed: !1
     })
 }
-function p(t) {
-    t && t.readyState >= 2 && (t.currentTime = 0,
-    t.play().catch( () => {}
-    ))
+function p(audio) {
+    if (!audio) return;
+    audio.play().catch(err => console.log(err));
 }
 function C() {
     e.isPlaying && (e.player.vy += i.gravity,
@@ -185,14 +184,12 @@ function f() {
     h.classList.add("hidden"),
     w.classList.remove("hidden"),
     p(n.sounds.background),
-    p(n.sounds.rakesh_master)
 }
 function y() {
     e.isPlaying && (e.isPlaying = !1,
     n.sounds.background && (n.sounds.background.pause(),
     n.sounds.background.currentTime = 0),
     p(n.sounds.hit),
-    p(n.sounds.rakesh_master),
     h.classList.remove("hidden"),
     w.classList.add("hidden"),
     x.textContent = e.score,
@@ -216,4 +213,5 @@ E.addEventListener("click", f);
 I.addEventListener("click", f);
 requestAnimationFrame(b);
 setInterval(C, 1e3 / 60);
+
 
